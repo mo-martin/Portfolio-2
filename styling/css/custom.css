@@ -12,100 +12,102 @@ overflow:hidden;
 }
 	
 body {
-	padding-top:35px;
+	padding-top:0px;
 	}
 
-#customnav {
-min-height:35px;
-background-color: #ffffff !important;
-border-color: #bbbbbb !important;
+/*Navigation*/
+.mainnav {
+  width: 100%;
+  height: auto;
+  background: #64137B; }
+
+/*Desktop nav*/
+.desktopnav {
+  display: block; }
+
+.desktopnav ul.mainlinks {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  display: table;
+  min-height: 50px; }
+
+.desktopnav ul.mainlinks li {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+  border-right: 1px solid #A37EAE; }
+
+.desktopnav ul.mainlinks li:first-child {
+  border-left: 1px solid #A37EAE; }
+
+.desktopnav ul.mainlinks a {
+  color: white;
+  text-decoration: none; }
+
+.mobilenav, .desktopnav {
+  min-height: 50px;
+  height: auto; }
+
+/*Mobile Nav*/
+.mobilenav {
+  text-align: center; }
+
+.mobilenav, button.navtoggle {
+  display: none; }
+
+.mobilenav ul.mainlinks {
+  display: none;
+  list-style: none;
+  padding-left: 0px; }
+
+@media (max-width: 768px) {
+  .desktopnav {
+    display: none; }
+
+  .mobilenav {
+    display: block; }
+
+  button.navtoggle {
+    display: table-cell;
+    margin: 5px auto;
+    text-align: center;
+    border: 0;
+    text-indent: 200%;
+    overflow: hidden;
+    background: white url(../../images/navbutton.png) center no-repeat;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-size: 80%;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out; }
+
+  button.navtoggle:hover {
+    opacity: 0.7; }
+
+  ul.mainlinks {
+    background: #8421A0;
+    margin: 0px;
+    padding: 0px 0px; }
+
+  ul.mainlinks li {
+    padding: 15px 10px;
+    border-bottom: 1px solid #A37EAE; }
+
+  ul.mainlinks a {
+    color: white;
+    text-decoration: none; } 
 }
 
-#navbutton {
-margin-top:0px;
-margin-bottom:0px;
-}
 
-.navbar-nav > li > a, .navbar-brand {
-    padding-top:8px !important; 
-    padding-bottom:0 !important;
-    height: 35px !important;
-}
-
-
-.navbar-default .navbar-brand {
-  color: #313131;
-}
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #000000;
-}
-.navbar-default .navbar-text {
-  color: #313131;
-}
-.navbar-default .navbar-nav > li > a {
-  color: #313131;
-}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #000000;
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #000000;
-  background-color: #bbbbbb;
-}
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #000000;
-  background-color: #bbbbbb;
-}
-.navbar-default .navbar-toggle {
-  border-color: #bbbbbb;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #bbbbbb;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #313131;
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: #313131;
-}
-.navbar-default .navbar-link {
-  color: #313131;
-}
-.navbar-default .navbar-link:hover {
-  color: #000000;
-}
-
-@media (max-width: 767px) {
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #313131;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #000000;
-  }
-  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #000000;
-    background-color: #bbbbbb;
-  }
-}
-
-
-
-nav {
-	padding:0px;
-	margin:0px;
-	}
 	
-nav ul {
-	padding:0px;
-	margin:0px;
-	}
-
-nav li {
-	padding:0px;
-	margin:0px;
-	}
-
+	
 /* fullscreen setup */
 
 

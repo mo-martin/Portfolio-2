@@ -16,3 +16,8 @@ jQuery(document).ready(function(){
 
 });
 
+$(document).ready(function(){
+    $("button.navtoggle").click(function(){
+        $(".mainlinks").slideToggle();
+    });
+});
