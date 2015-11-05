@@ -3,7 +3,7 @@ jQuery(document).ready(function(){
    
     jQuery('a[href^="#"]').click(function(e) {
 
-        jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
+        jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top - 50}, 1000);
 
         return false;
 
@@ -37,3 +37,22 @@ $(document).ready(function(){
   });
 
 })(jQuery);
+
+/* change element on scroll */
+var targetOffset = $("#contentstart").offset().top;
+
+var $w = $(window).scroll(function(){
+    if ( $w.scrollTop() > targetOffset ) {   
+        $('.mainnav').css({"background":"#767676"});
+        $('.mainnav').css({"height":"50px"});
+        $('button.navtoggle').css({"margin":"10px auto"});
+        $('ul.mainlinks a').css({"color":"#FFC330"});
+		$('ul.mainlinks a:hover').css({"color":"#000000"})
+    } else {
+      $('.mainnav').css({"background":""});
+	  $('ul.mainlinks a').css({"color":""});
+		$('ul.mainlinks a:hover').css({"color":""});
+		$('.mainnav').css({"height":""});
+        $('button.navtoggle').css({"margin":""});
+    }
+});
