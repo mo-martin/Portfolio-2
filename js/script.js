@@ -3,7 +3,7 @@ jQuery(document).ready(function(){
    
     jQuery('a[href^="#"]').click(function(e) {
 
-        jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top - 50}, 1000);
+        jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top - 70}, 1000);
 
         return false;
 
@@ -38,8 +38,35 @@ $(document).ready(function(){
 
 })(jQuery);
 
+(function($){  
+  $(document).ready(function(){
+	var targetOffset = $("#contentstart").offset().top - 100;
+    var current_width = $(window).width();
+	var $w = $(window).scroll(function(){
+    if(current_width < 768 && $w.scrollTop() > targetOffset){
+      $(".mainlinks").css("background","#a2a2a2");
+    }
+	else {
+		$(".mainlinks").css("background","");
+	}
+  });
+  });
+  $(window).resize(function(){
+	var targetOffset = $("#contentstart").offset().top - 100;
+    var current_width = $(window).width();
+	var $w = $(window).scroll(function(){
+		if(current_width < 768 && $w.scrollTop() > targetOffset){
+		  $(".mainlinks").css("background","#a2a2a2");
+		}
+		else {
+			$(".mainlinks").css("background","");
+		}
+		});
+  });
+})(jQuery);
+
 /* change element on scroll */
-var targetOffset = $("#contentstart").offset().top;
+var targetOffset = $("#contentstart").offset().top - 100;
 
 var $w = $(window).scroll(function(){
     if ( $w.scrollTop() > targetOffset ) {   
