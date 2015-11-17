@@ -83,3 +83,21 @@ var $w = $(window).scroll(function(){
         $('button.navtoggle').css({"margin":""});
     }
 });
+
+/* Blog posts */ 
+
+$(document).ready(function(){
+    $("#gridsetblog").click(function(){
+        $('#blogpost1').show();
+    });
+});
+$(document).ready(function(){
+    $("#portfolioblog").click(function(){
+        $('#blogpost2').show();
+    });
+});
+$(document).ready(function(){
+    $(".popupclose").click(function(){
+        $('.blogpost').hide();
+    });
+});
