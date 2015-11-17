@@ -27,24 +27,24 @@
 </div>
 
 
-<nav class="mainnav" role="navigation">
+<nav class="mainnav">
 	<div class="responsivenav" id="navigation">
 		<button class="navtoggle">toggle</button>
-			<ul class="mainlinks">
-				<a href="#top-page"><li role="menuitem">Home</li></a>
-				<a href="#about"><li role="menuitem">About</li></a>
-				<a href="#skillset"><li role="menuitem">Skills</li></a>
-				<a href="#mywork"><li role="menuitem">My Work</li></a>
-				<a href="#blog"><li role="menuitem">Blog</li></a>
-				<a href="#contact"><li role="menuitem">Contact</li></a>
-				
+			<ul class="mainlinks" role="menu">
+			<!-- W3C validator doesn't like this, but it's unavoidable -->
+				<li role="menuitem"><a href="#top-page">Home</a></li>
+				<li role="menuitem"><a href="#about">About</a></li>
+				<li role="menuitem"><a href="#skillset">Skills</a></li>
+				<li role="menuitem"><a href="#mywork">My Work</a></li>
+				<li role="menuitem"><a href="#blog">Blog</a></li>
+				<li role="menuitem"><a href="#contact">Contact</a></li>
 			</ul>
 	</div>
 </nav>
 
 <!-- Header -->
 <div class="header-container">
-<header role="banner" id="banner" class="vcenter">
+<header id="banner" class="vcenter">
             <h1>Moses Martin</h1>
 			<h2>Web Developer</h2>
 			<h3>Manchester Metropolitan University</h3>
@@ -53,10 +53,10 @@
 </div>			
 <!-- End Header -->
 
-<div class="divwrapper2" id="contentstart">
+<div class="divwrapper1" id="contentstart">
 <article id="about" class="div66width"> <!-- Start About -->
 		
-		<h1>About</h1>
+		<h2>About</h2>
 		
 				<article>
 				<h3>A little bit about me</h3>
@@ -85,10 +85,10 @@
 	</article> <!-- End About -->
 </div>
 
-<div class="divwrapper1">
+<div class="divwrapper2">
 	<article id="skillset" class="div66width">
 		<div style="width:100%;">
-			<h1>Skill Set</h1>
+			<h2>Skill Set</h2>
 		</div>
 		
 		<div class="div25width skills">
@@ -155,12 +155,13 @@
 			<p><span style="background:#C0EA29;"></span>70-79% - I have a very good knowledge of the topic and can code almost fluently.</p>
 			<p><span style="background:#86E01E;"></span>80-100% - I know almost everything there is to know about the topic and can code fluently.</p>
 		</div>
+		</article>
 </div>
 
-<div class="divwrapper2">
+<div class="divwrapper1">
 <article id="mywork" class="div66width"><!-- Start My Work -->
 		<div style="width:100%;">
-		<h1>My Work</h1>
+		<h2>My Work</h2>
 		</div>
 				
 				<div class="div33width">
@@ -200,20 +201,28 @@
 </article>
 </div>
 
-<div class="divwrapper1">
+<div class="divwrapper2">
 <article id="blog" class="div66width">
 	<div style="width:100%;">
-		<h1>Blog</h1>
+		<h2>Blog</h2>
 	</div>
-	<div class="div50width"></div>
-	<div class="div50width"></div>
+	<div class="blogflex">
+		<div class="blogcell">
+			<img src="images/gridset.jpg" alt="My gridset report" />
+		</div>
+		<div class="blogcell2">			
+				<h3>Portfolio<br>Blog</h3>
+		</div>
+	</div>
+	
 </article>
 </div>
 
-<div class="divwrapper2">
-	<article class="div66width" id="contact"> <!-- Start Contact -->
+<!-- Contact -->
+<div class="divwrapper1">
+	<article class="div66width" id="contact"> 
 		<div style="width:100%; text-align:center;">
-		<h1>Contact</h1>
+		<h2>Contact</h2>
 		<p> If you would like to get in contact with me please find all the necessary links and online profiles below. </p>
 		</div>
 			
@@ -224,21 +233,14 @@
 				
 				<a href="http://uk.linkedin.com/in/martinmoses"><img src="images/icons/linkedinbig2.jpg" alt="Mo's Linkedin Profile" /></a>
 				
-				<a href="mailto:momartin1@hotmail.co.uk?subject=We'd Like to offer You a 100k Salary" title="So you want to offer me a Job?"><img src="images/icons/emailbig2.jpg" alt="Email Mo"></a>
+				<a href="mailto:momartin1@hotmail.co.uk" title="So you want to offer me a Job?"><img src="images/icons/emailbig2.jpg" alt="Email Mo"></a>
 				
 				<a href="http://mosesmartin.co.uk/images/cv.docx"><img src="images/icons/cv.jpg" alt="Download my Curriculum Vitae" /></a>
 			
-			</article> <!-- End Contact -->
+			</article> 
 </div>
 <footer class="disclaimer">
-                <p>Copyright &copy; Moses Martin 2015-</p>
-				<!--| <a href="http://validator.w3.org/check?uri=referer" title="W3C HTML Validation Service" >Valid HTML</a> -->
-				<!--<div id="footer2" class="col-sm-6 col-sm-offset-3">
-				<a href="mailto:moses.martin@stu.mmu.ac.uk"> <img src="images/email.png" height="25" width="25" alt="Email Mo"/> </a>
-				<a href="https://www.facebook.com/mo.martin.39"> <img src="images/fb.png" height="25" width="25" alt="Link to Mo's Facebook page"/> </a>
-				<a href="http://www.twitter.com/Momartin_"> <img src="images/twitter.png" height="25" width="25" alt="link to Mo's Twitter Profile"/> </a>
-				
-			<!--</div>-->
+    <p>Copyright &copy; Moses Martin 2015-</p>
 </footer>  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>

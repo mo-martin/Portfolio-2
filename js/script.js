@@ -72,7 +72,7 @@ var $w = $(window).scroll(function(){
     if ( $w.scrollTop() > targetOffset ) {   
         $('.mainnav').css({"background":"#767676"});
         $('.mainnav').css({"height":"50px"});
-        $('button.navtoggle').css({"margin":"10px auto"});
+        $('button.navtoggle').css({"margin":"5px auto"});
         $('ul.mainlinks a').css({"color":"#FFC330"});
 		$('ul.mainlinks a:hover').css({"color":"#000000"})
     } else {
