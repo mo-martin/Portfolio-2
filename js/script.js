@@ -90,19 +90,18 @@ $(document).ready(function(){
     $("#gridsetblog").click(function(){
         $('#blogpost1').show();
     });
-});
-$(document).ready(function(){
     $("#portfolioblog").click(function(){
         $('#blogpost2').show();
     });
-});
-$(document).ready(function(){
     $("#amendmentsblog").click(function(){
         $('#blogpost3').show();
     });
-});
-$(document).ready(function(){
     $(".popupclose").click(function(){
         $('.blogpost').hide();
     });
+});
+$(document).keyup(function(e) {
+     if (e.keyCode == 27) { // escape key maps to keycode `27`
+        $('.blogpost').hide();
+    }
 });
