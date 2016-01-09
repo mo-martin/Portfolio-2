@@ -1,5 +1,6 @@
 /*Fonts */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,700,500);
 
 /*Main */
 * {
@@ -133,7 +134,7 @@ button.navtoggle {
   .responsivenav ul.mainlinks li  a{
 	  display:block;
 	  width:100%;
-      background: url(../images/arrow-black.png) no-repeat 96% 50%;
+     /* background: url(../images/arrow-black.png) no-repeat 96% 50%; */
   }
   .responsivenav ul.mainlinks a:hover {
 	border-left:10px solid black;  
@@ -191,7 +192,8 @@ header {
     transform: translateX(-50%) translateY(-50%); */
 	
   /* old method which uses transform (not supported by all browsers, but works fine on up to date) */
-	font-family: Roboto-thin;
+	font-family: 'Roboto', sans-serif;
+	font-weight:100;
 	padding: 0px;
 	margin: 10px;
 	border-style: none;
@@ -215,14 +217,14 @@ header h3 {
     font-size: 2em;
 	}
 header h1, header h2, header h3 {
-	font-family: Roboto-thin;
-    font-weight: 500;
+	font-family: 'Roboto', sans-serif;
+    font-weight: 100;
     line-height: 1.1;
     color: #fff;
 }
-	
+
 .header-container {
-	background: url(../images/intro.jpg) no-repeat center center fixed; 
+	background: url(../images/header.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -443,6 +445,9 @@ margin-bottom: 10px;
     filter: grayscale(0);
 	box-shadow: 7px 7px 10px grey;
 }
+#blog {
+	max-width:900px;
+}
 
 .blogflex{
 	width:100%;
@@ -451,12 +456,12 @@ margin-bottom: 10px;
 	flex-direction: row;
     flex-wrap: wrap;
 }
-.blogcell, .blogcell2 {
+.blogcell {
     width: 40%;
 	max-width:350px;
 }
 @media(max-width:600px) {
-	.blogcell, .blogcell2 {
+	.blogcell {
 	width:100%;
 	max-width:300px;
 	margin-top:20px;
@@ -495,54 +500,65 @@ margin-bottom: 10px;
 }
 .blogtemplate {
 	overflow:auto;
-	height:100%;
-	padding:20px 0px 20px 35px;
+	height:95%;
+	height: calc(100% - 40px);
+	padding:20px;
 }
 .blogtemplate img {
 	display:block;
 	margin:0 auto;
+	max-width:100%;
+}
+.blogtemplate img.blogimgs {
+	width:100%;
+	max-width:400px;
+	display:block;
+	margin:0 auto;
 }
 .blogtemplate h2{
+	margin-top:0px;
 	text-align:center;
 	font-family: montserrat, Helvetica, sans-serif;
-	font-size:2em;
+	font-size:2.5em;
+	text-transform:uppercase;
+	letter-spacing:8px;
+}
+@media(max-width:500px) {
+	.blogtemplate h2{
+		letter-spacing:4px;
+	}
 }
 .popupclose {
-	float: right;
+	float:right;
+	width:100%;
     padding-top: 10px;
     padding-right: 10px;
     height: auto;
     cursor: pointer;
 }
 .popupclose  img {
+	float: right;
 	height:30px;
 	width:30px;
 }
-.gridsetblog, .portfolioblog {
+.gridsetblog, .portfolioblog, .amendmentblog {
 	background: rgba(255,255,255,1);
 	width:100%;
 	max-width:850px;
 	height:100%;
 	margin:0 auto;
 }
-/*
-@media(max-width:1366px) {
-	.gridsetblog, .portfolioblog {
-		width:80%;
-	}	
+.amendmentblog .blogtemplate img {
+	width:100%;
+	max-width:450px;
 }
-@media(max-width:1088px) {
-	.gridsetblog, .portfolioblog {
-		width:90%;
-	}	
+.amendmentblog h3 {
+text-align:center;
 }
-@media(max-width:970px) {
-	.gridsetblog, .portfolioblog {
-		width:100%;
-	}	
-}*/
+/* Contact */
 #contact {
 	max-height:100%;
+	max-width:900px;
 	margin-top: 0px;
 	padding-top:30px;
 	padding-bottom:30px;
@@ -588,7 +604,32 @@ margin-bottom: 10px;
     filter: grayscale(0);
 	}
 }
-
+/* CONTACT FORM */
+.contactform {
+	width:100%;
+	max-width:600px;
+	display:block;
+	margin:0 auto;
+}
+.contactform p:first-child {
+	font-size:1.2em;
+	text-align:center;
+	font-weight:bold;
+}
+#contactform {
+	display:block;
+	margin:0 auto;
+}
+#contactform input, #contactform textarea{
+	width:100%;
+	padding:10px;
+	font-size:1.2em;
+	color:#000;
+}
+#contactform label {
+	font-size:1.2em;
+	color:grey;
+}
 
 
 
@@ -666,20 +707,5 @@ margin-left:10px;
     font-family: Bebas;
     src: url(../fonts/bebas.ttf);
 }
-@font-face {
-    font-family: Roboto-thin;
-    src: url(../fonts/Roboto-thin.ttf);
-}
-@font-face {
-    font-family: Roboto-regular;
-    src: url(../fonts/Roboto-regular.ttf);
-}
-@font-face {
-    font-family: Roboto-light;
-    src: url(../fonts/Roboto-light.ttf);
-}
-@font-face {
-    font-family: Roboto-bold;
-    src: url(../fonts/Roboto-bold.ttf);
-}}}old.ttf);
-}}}
+
+

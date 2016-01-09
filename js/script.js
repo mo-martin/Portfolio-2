@@ -1,16 +1,16 @@
 /* Smooth Scroll */
 jQuery(document).ready(function(){
-   
+	var current_width = $(window).width();
     jQuery('a[href^="#"]').click(function(e) {
-
-        jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top - 70}, 1000);
-
+		if(current_width < 768) {
+		jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top - 50}, 1000);
+		}
+		else {
+			jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top - 70}, 1000);
+		}
         return false;
-
         e.preventDefault();
-
     });
-
 });
 
 /* Responsive Nav - */
@@ -19,6 +19,7 @@ $(document).ready(function(){
         $(".mainlinks").slideToggle();
     });
 });
+
 (function($){
   $(document).ready(function(){
     var current_width = $(window).width();
@@ -35,7 +36,6 @@ $(document).ready(function(){
 		$(".mainlinks").css("display","");
 	}
   });
-
 })(jQuery);
 
 (function($){  
@@ -94,6 +94,11 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#portfolioblog").click(function(){
         $('#blogpost2').show();
+    });
+});
+$(document).ready(function(){
+    $("#amendmentsblog").click(function(){
+        $('#blogpost3').show();
     });
 });
 $(document).ready(function(){
