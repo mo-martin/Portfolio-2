@@ -41,14 +41,30 @@ $(document).ready(function(){
 (function($){  
   $(document).ready(function(){
 	var targetOffset = $("#contentstart").offset().top - 100;
+	var targetOffset2 = $("#skillset").offset().top - 70;
+	var targetOffset3 = $("#mywork").offset().top - 70;
+	var targetOffset4 = $("#blog").offset().top - 70;
+	var targetOffset5 = $("#contact").offset().top - 70;
     var current_width = $(window).width();
 	var $w = $(window).scroll(function(){
-    if(current_width < 768 && $w.scrollTop() > targetOffset){
-      $(".mainlinks").css("background","#a2a2a2");
-    }
-	else {
-		$(".mainlinks").css("background","");
-	}
+		if(current_width < 768 && $w.scrollTop() > targetOffset5){
+		  $(".mainlinks").css("background","#36D2E4");
+		}
+			else if(current_width < 768 && $w.scrollTop() > targetOffset4){
+			  $(".mainlinks").css("background","#F2E400");
+			}
+				else if(current_width < 768 && $w.scrollTop() > targetOffset3){
+				  $(".mainlinks").css("background","#8132BA");
+				}
+					else if(current_width < 768 && $w.scrollTop() > targetOffset2){
+					  $(".mainlinks").css("background","#0368AC");
+					}
+						else if(current_width < 768 && $w.scrollTop() > targetOffset){
+						  $(".mainlinks").css("background","#a2a2a2");
+						}
+		else {
+			$(".mainlinks").css("background","");
+		}
   });
   });
   $(window).resize(function(){
@@ -85,37 +101,42 @@ var $w = $(window).scroll(function(){
     }
 });*/
 var targetOffset = $("#contentstart").offset().top - 100;
-var targetOffset2 = $("#skillset").offset().top;
-var targetOffset3 = $("#contentstart").offset().top;
+var targetOffset2 = $("#skillset").offset().top - 70;
+var targetOffset3 = $("#mywork").offset().top - 70;
+var targetOffset4 = $("#blog").offset().top - 70;
+var targetOffset5 = $("#contact").offset().top - 70;
 
 var $w = $(window).scroll(function(){
-    if ( $w.scrollTop() > targetOffset ) {   
-        $('.mainnav').css({"background":"#767676"});
-        $('.mainnav').css({"height":"50px"});
-        $('button.navtoggle').css({"margin":"5px auto"});
-        $('ul.mainlinks a').css({"color":"#FFC330"});
-		$('ul.mainlinks a:hover').css({"color":"#000000"})
-    } 
-	else if($w.scrollTop() > targetOffset2){
-		$('.mainnav').css({"background":"#fff"});
-        $('.mainnav').css({"height":"50px"});
-        $('button.navtoggle').css({"margin":"5px auto"});
-        $('ul.mainlinks a').css({"color":"#000"});
-		$('ul.mainlinks a:hover').css({"color":"#000000"})
-	}
-	else if($w.scrollTop() > targetOffset3){
-		$('.mainnav').css({"background":"#666"});
-        $('.mainnav').css({"height":"50px"});
-        $('button.navtoggle').css({"margin":"5px auto"});
-        $('ul.mainlinks a').css({"color":"#000"});
-		$('ul.mainlinks a:hover').css({"color":"#000000"})
-	}else {
-      $('.mainnav').css({"background":""});
-	  $('ul.mainlinks a').css({"color":""});
-		$('ul.mainlinks a:hover').css({"color":""});
-		$('.mainnav').css({"height":""});
-        $('button.navtoggle').css({"margin":""});
+
+    if ( $w.scrollTop() > targetOffset5 ) {
+		$('.mainnav').css({"background":"#2EDEF3"});
+        $('ul.mainlinks a').css({"color":"#fff"});
     }
+		else if ( $w.scrollTop() > targetOffset4 ) {
+		$('.mainnav').css({"background":"#FDEE00"});
+        $('ul.mainlinks a').css({"color":"#000"});
+		}
+			else if ( $w.scrollTop() > targetOffset3 ) {
+				$('.mainnav').css({"background":"#6B1CA4"});
+				$('ul.mainlinks a').css({"color":"#FFE500"});
+			}
+				else if($w.scrollTop() > targetOffset2){
+					$('.mainnav').css({"background":"#0170BB"});
+					$('ul.mainlinks a').css({"color":"#fff"});
+				}
+					else if($w.scrollTop() > targetOffset){
+						$("#navigation").addClass("mainnavcss");
+						$('.mainnav').css({"background":"#767676"});
+						$('button.navtoggle').css({"margin":"5px auto"});
+						$('ul.mainlinks a').css({"color":"#FFC330"});
+						$('ul.mainlinks a:hover').css({"color":"#000000"})
+					}
+					else{
+						$("#navigation").removeClass("mainnavcss");
+						$('.mainnav').css({"background":""});
+						$('button.navtoggle').css({"margin":""});
+						$('ul.mainlinks a').css({"color":""});
+						}
 });
 
 /* Blog posts */ 

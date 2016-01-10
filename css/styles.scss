@@ -80,6 +80,9 @@ overflow:hidden;
 }
 button.navtoggle {
   display: none; }
+/* Nav scroll classes */
+
+
 /* Header */
 .vcenter {
 vertical-align: middle;
@@ -517,7 +520,7 @@ footer {
 					width:100%;
 					padding: 15px 10px;
 					border-bottom: 1px solid rgba(0,0,0,0.16);
-					color: $textcolour1;
+					color: $textcolour2;
 					text-decoration: none; 
 						&:hover {
 							border-left:10px solid black;  
