@@ -249,8 +249,8 @@ article > div:first-child {
   -moz-transition-delay: all 0.7s ease;
   -ms-transition-delay: all 0.7s ease;
   -o-transition-delay: all 0.7s ease;
-  -webkit-filter: grayscale(0.7);
-  filter: grayscale(0.7); }
+  -webkit-filter: grayscale(0.3);
+  filter: grayscale(0.3); }
   #mywork img:hover {
     transition: all 0.7s ease;
     -webkit-transition-delay: all 0.7s ease;
@@ -259,7 +259,7 @@ article > div:first-child {
     -o-transition-delay: all 0.7s ease;
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
-    box-shadow: 7px 7px 10px grey; }
+    box-shadow: 0px 0px 20px grey; }
 
 /* Blog */
 #blog {
